@@ -33,15 +33,12 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-#Make erros better looking
-gem 'better_errors', '~> 2.4'
-
 gem 'sassc', '~> 2.1.0'
 #css framework based on flexbox
 gem 'bulma-rails', '~> 0.8.0'
 
 # idk
-gem 'simple_form', '~> 3.2', '>= 3.2.1'
+gem 'simple_form', '~> 5.0', '>= 5.0.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -49,6 +46,7 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
+
 end
 
 group :development do
@@ -59,7 +57,11 @@ group :development do
   gem 'guard', '~> 2.16', '>= 2.16.2'
 
   # Guard::LiveReload automatically reloads your browser when 'view' files are modified.
-  gem 'guard-livereload', '~> 2.5', '>= 2.5.2'
+  gem 'guard-livereload', '~> 2.5', '>= 2.5.2', require: false
+
+  #Make erros better looking
+  gem 'better_errors', '~> 2.4'
+
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
