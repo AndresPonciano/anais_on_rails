@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="has-background-light">
   <head>
     <title>SampleApp</title>
     <%= csrf_meta_tags %>
@@ -9,6 +9,7 @@
   </head>
 
   <body>
+    <%= render 'layouts/navigation' %>
     <%= yield %>
   </body>
 </html>
