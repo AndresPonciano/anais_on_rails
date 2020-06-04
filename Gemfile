@@ -40,6 +40,9 @@ gem 'bulma-rails', '~> 0.8.0'
 # idk
 gem 'simple_form', '~> 5.0', '>= 5.0.2'
 
+#icons!!!!
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

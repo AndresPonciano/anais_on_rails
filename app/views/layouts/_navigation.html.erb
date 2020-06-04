@@ -1,5 +1,5 @@
 <nav class="navbar is-primary">
-    <div class="navbar-brand">
+    <div class="navbar-brand" style="margin-left: 10px">
         <a class="navbar-item">
             <%= image_tag("Logo.png", :alt => "peepee") %>
             <span style="padding: 10px">anais</span>
@@ -9,13 +9,14 @@
 
     <div class="navbar-end">
         <div class="navbar-item">
-            Contactenos
-    
-    </div>
+            <span style="padding-right: 8px"> Contactenos </span>
+            
+            <%= fa_icon "phone" %>
+        </div>
 </nav>
 
 <nav class="navbar is-info">
-    <a class="navbar-item has-text-white">Zapatos</a>
-    <a class="navbar-item has-text-white">Accesorios</a>
+        <a class="navbar-item has-text-white" style="margin-left: 10px">Zapatos</a>
+        <a class="navbar-item has-text-white">Accesorios</a>
 </nav>
 
