@@ -1,3 +1,4 @@
+
 !(function(d) {
 
     var itemClassName = "carousel__photo";
@@ -7,22 +8,33 @@
         moving = true;
 
     function setInitialClasses() {
-        items[totalItems-1].classList.add("prev");
+
+        console.log("HA?");
+        console.log(items);
+        console.log(items.length);
+        console.log(d);
+        items[totalItems - 1].classList.add("prev");
         items[0].classList.add("active");
         items[1].classList.add("next");
+        console.log(items);
+        
+        // items[totalItems - 1].add("prev");
+        // items[0].add("active");
+        // items[1].add("next");
     }
 
     function setEventListeners() {
         var next = d.getElementsByClassName('carousel__button--next')[0],
-            prev = d.getElementsByClassName('carousel__buton--prev')[0];
+            prev = d.getElementsByClassName('carousel__button--prev')[0];
 
         next.addEventListener('click', moveNext);
         prev.addEventListener('click', movePrev);
     }
 
     function moveNext() {
+
         if(!moving) {
-            if(slide == (totalItems-1)) {
+            if(slide === (totalItems-1)) {
                 slide = 0;
 
             } else {
@@ -35,7 +47,7 @@
 
     function movePrev() {
         if(!moving) {
-            if(slide == 0) {
+            if(slide === 0) {
                 slide = (totalItems-1);
             } else {
                 slide--;
@@ -71,11 +83,11 @@
                     oldNext = 0;
                 }
 
-                if(slide == 0) {
+                if(slide === 0) {
                     newPrevious = (totalItems - 1);
                     oldPrevious = (totalItems - 2);
                     oldNext = (slide + 1);
-                } else if (slide == (totalItems - 1)) {
+                } else if (slide === (totalItems - 1)) {
                     newPrevious = (slide - 1);
                     newNext = 0;
                     oldNext = 1; 
@@ -86,7 +98,7 @@
 
                 items[newPrevious].className = itemClassName + " prev";
                 items[slide].className = itemClassName + " active";
-                items[next].className = itemClassName + " next";
+                items[newNext].className = itemClassName + " next";
             }
         }
     }
